@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+
+import Costs from "./components/Costs";
+import ExchangeRates from "./components/ExchangeRates";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Content>
+      <Title>EuroBills</Title>
+      <Costs />
+      <ExchangeRates />
+    </Content>
   );
 }
 
 export default App;
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  font-family: "Yeon Sung", cursive;
+  text-align: center;
+  font-size: 3em;
+`;
+
