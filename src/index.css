@@ -3,12 +3,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--mainYellow);
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 :root {
-  --mainYellow: #ec9700;
+  --mainYellow: rgb(236, 151, 0);
   --strongYellow: #d86411;
-  --lightYellow: #f9ea63;
+  --lightYellow: rgb(249, 234, 99);
   --mainBlack: #111;
   --white: #fff;
   --success: #155724;

@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
-const Input = ({ type, name, handleOnChange }) => {
+const Input = ({ type, name, handleOnChange, placeHolder }) => {
   return (
     <div>
-      <StyledInput type={type} name={name} onChange={handleOnChange} />
+      <StyledInput
+        type={type}
+        name={name}
+        onChange={handleOnChange}
+        placeholder={placeHolder}
+      />
     </div>
   );
 };
@@ -11,7 +16,7 @@ const Input = ({ type, name, handleOnChange }) => {
 export default Input;
 
 const StyledInput = styled.input`
-  margin: 3px;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid var(--strongYellow);
+  border-radius: 15px;
 `;

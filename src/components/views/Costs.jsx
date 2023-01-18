@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Input from "./form/Input";
-import Wrapper from "./Wrapper";
+import Input from "../form/Input";
+import Wrapper from "../layout/Wrapper";
 
 const Costs = () => {
   const [data, setData] = useState({});

@@ -1,14 +1,22 @@
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import Navbar from "./components/layout/Navbar";
 
-import Costs from "./components/Costs";
-import ExchangeRates from "./components/ExchangeRates";
+import Contact from "./components/views/Contact";
+import GeneralCosts from "./components/views/GeneralCosts";
+import Cities from "./components/views/Cities";
+import Wallet from "./components/views/Wallet";
 
 function App() {
   return (
     <Content>
-      <Title>EuroBills</Title>
-      <Costs />
-      <ExchangeRates />
+      <Navbar />
+      <Routes>
+        <Route path="/cities" element={<Cities />} />
+        <Route path="/general-cost" element={<GeneralCosts />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </Content>
   );
 }
@@ -20,11 +28,5 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
-
-const Title = styled.h1`
-  font-family: "Yeon Sung", cursive;
-  text-align: center;
-  font-size: 3em;
 `;
 
